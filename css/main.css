@@ -1,0 +1,749 @@
+.wrapper {
+  margin: 0 auto;
+  padding: 0 2em;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.white-block {
+  position: absolute;
+  height: 40px;
+  width: 60%;
+  background-color: #fff;
+}
+.white-block-left {
+  bottom: -2px;
+  left: -50px;
+  transform: skew(45deg);
+}
+.white-block-right {
+  top: 0;
+  right: -50px;
+  transform: skew(45deg);
+}
+
+.btn-animation {
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s;
+  z-index: 0;
+}
+.btn-animation::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s;
+  z-index: -1;
+}
+.btn-animation:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.section-heading {
+  position: relative;
+  margin-bottom: 2em;
+  font-size: 3rem;
+  font-weight: 300;
+  text-align: center;
+  color: #a8a8a8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section-padding {
+  padding: 6em 0;
+}
+
+@media (min-width: 768px) {
+  .section-heading {
+    font-size: 3.6rem;
+  }
+  .section-padding {
+    padding: 8em 0;
+  }
+}
+@media (min-width: 992px) {
+  .section-heading {
+    font-size: 4.8rem;
+  }
+  .section-padding {
+    padding: 10em 0;
+  }
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+
+  
+body {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+
+.burger-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 1em;
+  background: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  z-index: 1000;
+}
+.burger-btn:focus {
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+}
+.burger-btn:hover .burger-btn__bars::after,
+.burger-btn:hover .burger-btn__bars::before {
+  width: 100%;
+}
+.burger-btn__box {
+  position: relative;
+  width: 60px;
+  height: 30px;
+}
+.burger-btn__bars, .burger-btn__bars::after, .burger-btn__bars::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  height: 3px;
+  background-color: #fff;
+  transition: width 0.3s;
+}
+.burger-btn__bars {
+  top: 0;
+  width: 100%;
+}
+.burger-btn__bars::after {
+  top: 12px;
+  width: 60%;
+}
+.burger-btn__bars::before {
+  top: 24px;
+  width: 30%;
+  transition-delay: 0.1s;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  transform: translateX(100%);
+  transition: all 0.5s ease;
+  background: rgb(230,230,250);
+  background: linear-gradient(90deg, rgba(230,230,250,1) 15%, rgba(176,224,230,1) 100%);
+  z-index: 100;
+}
+.nav--active {
+  transform: translateX(0);
+}
+.nav__item {
+  position: relative;
+  display: block;
+  margin: 0.5em 0;
+  padding: 0.5em 2em;
+  font-size: 2.8rem;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+.nav__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: rgba(172,136,85,0.5);
+  z-index: -1;
+  transition: width 0.3s;
+}
+.nav__item:hover::before {
+  width: 100%;
+}
+
+@keyframes navItemAnimation {
+  from {
+    transform: translateX(200%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.nav-item-animation {
+  animation: navItemAnimation 1s both;
+}
+
+.black-bars-color,
+.black-bars-color::after,
+.black-bars-color::before {
+  background-color: #2e2e2e;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  height: 75vh;
+  color: #fff;
+  text-align: center;
+  background-image: linear-gradient(90deg, rgba(230,230,250,0.5) 15%, rgba(176,224,230,0.5)), url("../img/header-small.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-attachment: scroll;
+}
+.header__heading {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.header__text {
+  font-size: 1.4rem;
+}
+.header__btn {
+  margin-top: 5em;
+  padding: 0.6em 1.2em;
+  background: #fff;
+  border: none;
+  border-radius: 8px;
+  color: #2e2e2e;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+.header__btn::before {
+  background-color: #e9decf;
+}
+
+.dreams__box {
+  display: flex;
+  flex-direction: column;
+  margin: 2em 0;
+}
+.dreams__img {
+  width: 100%;
+  margin-bottom: 1em;
+  border-radius: 8px;
+}
+.dreams__title {
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+}
+.dreams__text {
+  font-size: 1.4rem;
+}
+
+.hero-img {
+  position: relative;
+  padding: 10em 2em;
+  background-image: linear-gradient(90deg, rgba(230,230,250,0.75) 15%, rgba(176,224,230,0.75)), url("../img/tachiti-small.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+.hero-img__title {
+  margin-bottom: 0.5em;
+  font-size: 4.8rem;
+}
+.hero-img__text {
+  padding: 1em 0;
+}
+
+.islands__card {
+  position: relative;
+  margin: 1em 0;
+  height: 450px;
+  color: #fff;
+  text-align: center;
+  perspective: 1000px;
+}
+.islands__card:hover .islands__card-img {
+  transform: rotateY(-180deg);
+  opacity: 0;
+}
+.islands__card:hover .islands__card-info {
+  transform: rotateY(0);
+  opacity: 1;
+}
+.islands__card-img {
+  padding: 2em;
+  height: 100%;
+  border-radius: 12px;
+  background-size: cover;
+  transition: transform 1s, opacity 1s;
+}
+.islands__card-img--first {
+  background-image: linear-gradient(90deg, rgba(211,211,211,0.5) 15%, rgba(250,250,250,0.5) 100%), url("../img/alpy.jpg");
+}
+.islands__card-img--second {
+  background-image: linear-gradient(90deg, rgba(255,204,203,0.5) 15%, rgba(255,182,193,0.5) 100%), url("../img/japan.jpg");
+  background-position: bottom;
+}
+.islands__card-img--third {
+  background-image: linear-gradient(90deg, rgba(176,224,230,0.5) 36%, rgba(180,241,180,0.5) 100%), url("../img/wyspa.jpg");
+}
+.islands__card-img-title {
+  font-size: 2.8rem;
+}
+.islands__card-img-info {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  font-size: 1.8rem;
+}
+.islands__card-img-info i {
+  margin-right: 0.3em;
+}
+.islands__card-info {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: radial-gradient(circle at top right, rgba(230,230,250,1) 15%, rgba(176,224,230,1) 100%);
+  border-radius: 12px;
+  opacity: 0;
+  transform: rotateY(180deg);
+  transition: transform 1s, opacity 1s;
+}
+.islands__card-info-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 1.2em;
+  font-size: 2.8rem;
+}
+.islands__card-info-list {
+  margin: 0 auto;
+  width: 70%;
+  list-style: none;
+}
+.islands__card-info-list-item {
+  padding: 1em;
+  font-size: 1.4rem;
+  border-bottom: 1px solid #eee;
+}
+.islands__card-info-list-item:last-child {
+  border-bottom: none;
+}
+.islands__card-info-btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2em;
+  padding: 1em;
+  border-radius: 8px;
+  width: 80%;
+  border: none;
+  background-color: rgba(172,136,85,0.5);
+  cursor: pointer;
+}
+.islands__card-info-btn::before {
+  background-color: rgba(172,136,85,0.5);
+}
+
+.offers {
+  position: relative;
+  background-image: linear-gradient(90deg, rgba(230,230,250,0.75) 15%, rgba(176,224,230,0.75)), url("../img/oferty-hero-small.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+.offers .section-heading {
+  color: #fff;
+}
+.offers__option {
+  margin: 1em 0;
+  box-shadow: 5px 5px 10px hsla(0, 0%, 18%, 0.18);
+  background-color: #fff;
+  overflow: hidden;
+}
+.offers__option-img {
+  width: 100%;
+  transition: transform 0.3s;
+}
+.offers__option-img:hover {
+  transform: scale(1.1);
+}
+.offers__option-info {
+  padding: 2em;
+  background-color: #fff;
+  z-index: 10;
+}
+.offers__option-heading {
+  margin-bottom: 0.5em;
+  font-size: 2.4rem;
+  font-weight: 300;
+  color: #2e2e2e;
+}
+.offers__option-btn {
+  margin-top: 1em;
+  padding: 0.8em;
+  width: 100%;
+  color: #fff;
+  background-color: #b0e0e6;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.offers__option-btn::before {
+  background-color: #88b1b6;
+}
+
+@media (max-width: 767px) {
+  .reviews .wrapper {
+    padding: 0;
+  }
+}
+.reviews__box {
+  position: relative;
+  margin: 2em;
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 3px 3px 10px rgba(46, 46, 46, 0.18);
+  transition: transform 0.3s;
+}
+.reviews__box:hover {
+  transform: scale(0.95);
+}
+.reviews__box-img {
+  position: absolute;
+  top: 8%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+}
+.reviews__box-img img {
+  width: 80px;
+  height: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.reviews__box-quote {
+  margin-bottom: 1em;
+  font-size: 3rem;
+  color: #ffb6c1;
+}
+.reviews__box-text {
+  margin-bottom: 1em;
+  font-size: 1.4rem;
+  color: #2e2e2e;
+}
+
+.contact {
+  position: relative;
+  background-color: #eee;
+  overflow: hidden;
+  padding: 20px;
+  padding-bottom: 100px;
+}
+
+.contact__form-top, .contact__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__form-label {
+  margin-bottom: 1.5em;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.contact__form-input, .contact__form-textarea {
+  margin-bottom: 2em;
+  padding: 0.6em 1.2em;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.6rem;
+}
+
+.contact__form-btn {
+  align-self: flex-end;
+  padding: 1em;
+  width: 100%;
+  max-width: 300px;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  background-color: #b0e0e6;
+  cursor: pointer;
+}
+
+.contact__form-btn::before {
+  background-color: #88b1b6;
+}
+
+.contact-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.contact__form {
+  flex: 1;
+  max-width: 45%;
+  margin-right: 20px;
+}
+
+#map {
+  flex: 1;
+  height: 400px;
+  width: 45%;
+  border: 1px solid #ccc;
+}
+
+/* Для адаптивності на мобільних пристроях */
+@media (max-width: 768px) {
+  .contact-wrapper {
+      flex-direction: column;
+  }
+
+  .contact__form, #map {
+      width: 100%;
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 20px;
+  }
+}
+
+.footer {
+  color: #fff;
+  background-color: #2e2e2e;
+}
+.footer .wrapper {
+  padding: 6em 2em 2em;
+}
+.footer__box {
+  font-size: 1.4rem;
+}
+.footer__box-title i {
+  margin-right: 0.3em;
+}
+.footer__box-desktop {
+  display: none;
+}
+.footer__box-title {
+  margin-bottom: 1em;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+.footer__box-social {
+  margin: 6em 0 0;
+  text-align: center;
+}
+.footer__box-link {
+  padding: 0 0.3em;
+  font-size: 3.6rem;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer__box-link:first-child {
+  padding-left: 0;
+}
+.footer__box-link:hover {
+  color: #ffb6c1;
+}
+.footer__bottom-text {
+  padding: 2em;
+  text-align: center;
+}
+
+@media (min-width: 576px) {
+  .dreams__box {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .dreams__box-right {
+    flex-direction: row-reverse;
+  }
+  .dreams__box-text {
+    width: 55%;
+  }
+  .dreams__box-text--right {
+    text-align: right;
+  }
+  .dreams__box-img {
+    width: 40%;
+  }
+  .offers__option {
+    display: flex;
+    margin: 2em 0;
+    width: 100%;
+  }
+  .offers__option--right {
+    flex-direction: row-reverse;
+  }
+  .offers__option-img {
+    width: 50%;
+    height: auto;
+  }
+  .offers__option-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .offers__option-heading {
+    margin-bottom: 0.5em;
+    font-size: 3.6rem;
+  }
+  .offers__option-btn {
+    padding: 1em;
+  }
+}
+@media (min-width: 768px) {
+  .white-block {
+    height: 50px;
+    width: 45%;
+  }
+  .header__heading {
+    font-size: 6.8rem;
+  }
+  .header__btn {
+    font-size: 1.8rem;
+  }
+  .dreams__text {
+    font-size: 1.8rem;
+  }
+  .hero-img {
+    padding: 30rem 2em;
+  }
+  .hero-img hr {
+    margin: 0 auto;
+    width: 70%;
+  }
+  .hero-img__text {
+    font-size: 2.2rem;
+  }
+  .islands__cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .islands__card {
+    margin: 1em;
+    width: 45%;
+  }
+  .footer__boxes {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer__box-desktop {
+    display: block;
+  }
+  .footer__box {
+    margin: 0 2em;
+    width: 25%;
+  }
+  .footer__box:first-child {
+    width: 50%;
+  }
+  .footer__box-title {
+    font-size: 2.4rem;
+  }
+  .footer__box-list {
+    list-style: none;
+  }
+  .footer__box-list-item {
+    margin-bottom: 1em;
+  }
+  .footer__box-list-item a {
+    color: #eee;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .footer__box-list-item a:hover {
+    color: #ffb6c1;
+  }
+}
+@media (min-width: 992px) {
+  .burger-btn {
+    top: 50px;
+    right: 50px;
+  }
+  .header {
+    background-image: linear-gradient(90deg, rgba(230,230,250,0.4) 15%, rgba(176,224,230,0.4)), url("../img/header-big.jpg");
+  }
+  .header__heading {
+    font-size: 10rem;
+  }
+  .nav__item {
+    font-size: 4.8rem;
+  }
+  .dreams__box {
+    margin: 5em 0;
+  }
+  .dreams-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 2.5em;
+  }
+  .hero-img {
+    padding: 40rem 2em;
+    background-image: linear-gradient(90deg, rgba(230,230,250,0.4) 15%, rgba(176,224,230,0.4)), url("../img/tachiti-big.jpg");
+  }
+  .hero-img__title {
+    font-size: 7.2rem;
+  }
+  .hero-img hr {
+    width: 60%;
+    max-width: 900px;
+  }
+  .offers {
+    background-image: linear-gradient(90deg, rgba(230,230,250,0.4) 15%, rgba(176,224,230,0.4)), url("../img/oferty-hero-big.jpg");
+  }
+  .offers__option-img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 300px;
+  }
+  .offers__option-text {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1100px) {
+  .islands__card {
+    width: 30%;
+  }
+}/*# sourceMappingURL=main.css.map */
