@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Site</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://kit.fontawesome.com/97392591bc.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <nav>
+        <button class="burger-btn">
+            <div class="burger-btn__box">
+                <div class="burger-btn__bars"></div>
+            </div>
+        </button>
+        
+        <div class="nav">
+            <div class="nav__items">
+                <a href="#islands" class="nav__item">Місця</a>
+                <a href="#offers" class="nav__item">Пропозиції</a>
+                <a href="#reviews" class="nav__item">Відгуки</a>
+                <a href="#contact" class="nav__item">Контакти</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="header section">
+        <h1 class="header__heading">Туристичний сайт</h1>
+        <a href="#offers" class="header__btn btn-animation">Пропозиції</a>
+        <div class="white-block white-block-left"></div>
+    </header>
+
+    <main class="main">
+        <section class="dreams section section-padding white-section">
+            <div class="wrapper">
+                <h2 class="section-heading">Реалізуйте ваші мрії з нами</h2>
+
+                <div class="dreams__box">
+                    <div class="dreams__box-img">
+                        <img src="./img/img2.jpg" alt="дім над океаном" class="dreams__img">
+                    </div>
+                    <div class="dreams__box-text">
+                        <h3 class="dreams__title">Місце, де ваші мрії оживають</h3>
+                        <p class="dreams__text">З нами ви поринете у справжню казку. 
+                            Дозвольте собі відпочинок, про який ви завжди мріяли. Екзотичні локації та неперевершені враження стануть реальністю.</p>
+                    </div>
+
+                </div>
+                <div class="dreams__box dreams__box-right">
+                    <div class="dreams__box-img">
+                        <img src="./img/img1.jpg" alt="дік над океаном на тлі гір" class="dreams__img">
+                    </div>
+                    <div class="dreams__box-text dreams__box-text--right">
+                        <h3 class="dreams__title">Ваші незабутні пригоди починаються тут</h3>
+                        <p class="dreams__text">Кожна подорож – це новий досвід, незабутні моменти та справжня магія пригод. 
+                            Не пропустіть можливість відкрити світ з нового боку.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="hero-img section">
+            <div class="white-block white-block-left"></div>
+            <div class="white-block white-block-right"></div>
+            <p class="hero-img__title">Світ пригод чекає на вас</p>
+            <hr>
+            <p class="hero-img__text">Найкращі напрямки для ваших подорожей</p>
+            <hr>
+        </section>
+
+        <section class="islands section-padding section white-section" id="islands">
+            <div class="wrapper">
+                <h2 class="section-heading">Рекомендовані напрямки для подорожей</h2>
+                <div class="islands__cards">
+
+                    <div class="islands__card" id="recomandation" onclick="void(0)">
+                        <div class="islands__card-img islands__card-img--first">
+                            <h3 class="islands__card-img-title">Зимовий курорт "Альпійська мрія"</h3>
+                            <p class="islands__card-img-info"><i class="fas fa-angle-double-right"></i>Більше
+                            </p>
+                        </div>
+                        <div class="islands__card-info">
+                            <h3 class="islands__card-info-title">Альпійська мрія</h3>
+                            <ul class="islands__card-info-list">
+                                <li class="islands__card-info-list-item">Гірськолижні траси</li>
+                                <li class="islands__card-info-list-item">Спа з видом на гори</li>
+                                <li class="islands__card-info-list-item">Затишні шале</li>
+                                <li class="islands__card-info-list-item">Ковзанка просто неба</li>
+                                <li class="islands__card-info-list-item">Живописні зимові пейзажі</li>
+                            </ul>
+                            <button class="islands__card-info-btn btn-animation">Обрати</button>
+                        </div>
+                    </div>
+
+                    <div class="islands__card" onclick="void(0)">
+                        <div class="islands__card-img islands__card-img--second">
+                            <h3 class="islands__card-img-title">Весняне місто "Сакура Сіті"</h3>
+                            <p class="islands__card-img-info"><i class="fas fa-angle-double-right"></i>Більше
+                            </p>
+                        </div>
+                        <div class="islands__card-info">
+                            <h3 class="islands__card-info-title">Сакура Сіті</h3>
+                            <ul class="islands__card-info-list">
+                                <li class="islands__card-info-list-item">Цвітіння сакури</li>
+                                <li class="islands__card-info-list-item">Традиційні чайні церемонії</li>
+                                <li class="islands__card-info-list-item">Вечірні фестивалі</li>
+                                <li class="islands__card-info-list-item">Сучасна архітектура серед природи</li>
+                                <li class="islands__card-info-list-item">Японська кухня</li>
+                            </ul>
+                            <button class="islands__card-info-btn btn-animation">Обрати</button>
+                        </div>
+                    </div>
+
+                    <div class="islands__card" onclick="void(0)">
+                        <div class="islands__card-img islands__card-img--third">
+                            <h3 class="islands__card-img-title">Літній острів "Сонячна лагуна"</h3>
+                            <p class="islands__card-img-info"><i class="fas fa-angle-double-right"></i>Більше
+                            </p>
+                        </div>
+                        <div class="islands__card-info">
+                            <h3 class="islands__card-info-title">Сонячна лагуна</h3>
+                            <ul class="islands__card-info-list">
+                                <li class="islands__card-info-list-item">Білі піщані пляжі</li>
+                                <li class="islands__card-info-list-item">Кришталево чиста вода</li>
+                                <li class="islands__card-info-list-item">Дайвінг та снорклінг</li>
+                                <li class="islands__card-info-list-item">Екзотичні морепродукти</li>
+                                <li class="islands__card-info-list-item">Прогулянки на яхті</li>
+                            </ul>
+                            <button class="islands__card-info-btn btn-animation">Обрати</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="offers section section-padding" id="offers">
+
+            <div class="white-block white-block-right"></div>
+            <div class="white-block white-block-left"></div>
+
+            <h2 class="section-heading">Пропозиції</h2>
+            <div class="wrapper">
+
+                <div class="offers__box">
+
+                    <div class="offers__option">
+                        <img src="./img/dating.jpg" alt="Побачення" class="offers__option-img">
+                        <div class="offers__option-info">
+                            <h3 class="offers__option-heading">Літня романтика для двох</h3>
+                            <p class="offers__option-text">
+                                Насолоджуйтеся теплим літнім вечором на пляжі під час романтичної вечері з видом на захід сонця. 
+                                Ідеальний відпочинок для пар, які цінують атмосферу та затишок.
+                            </p>
+                            <p class="offers__option-text">
+                                Виберіть це, щоб створити незабутні спогади під зоряним небом в найромантичнішій обстановці!
+                            </p>
+                            <button class="offers__option-btn btn-animation">Обрати</button>
+                        </div>
+                    </div>
+
+                    <div class="offers__option offers__option--right">
+                        <img src="./img/zyma.jpg" alt="Група людей катаються на лижах"
+                            class="offers__option-img offers__option-img--right">
+                        <div class="offers__option-info">
+                            <h3 class="offers__option-heading">Зимовий екстрим для шукачів пригод</h3>
+                            <p class="offers__option-text">
+                                Відчуйте адреналін від зимових видів спорту! 
+                                Катання на лижах, сноуборді або захоплюючі подорожі сніговими горами — це все для тих, хто любить екстрим і зиму.
+                            </p>
+                            <p class="offers__option-text">
+                                Виберіть це, щоб кинути виклик собі та отримати справжню дозу адреналіну в серці зими!
+                            </p>
+                            <button class="offers__option-btn btn-animation">Обрати</button>
+                        </div>
+                    </div>
+
+                    <div class="offers__option">
+                        <img src="./img/vesna.jpg" alt="Весна в японії"
+                            class="offers__option-img">
+                        <div class="offers__option-info">
+                            <h3 class="offers__option-heading">Весняний відпочинок на природі з друзями</h3>
+                            <p class="offers__option-text">
+                                Проведіть активні дні на свіжому повітрі,
+                                 влаштувавши пікнік з друзями або вирушивши на прогулянку мальовничими стежками, оточеними квітучими деревами.
+                            </p>
+                            <p class="offers__option-text">
+                                Виберіть це, щоб відчути всю красу весняної природи разом з близькими на тлі свіжих квітів та співу птахів!
+                            </p>
+                            <button class="offers__option-btn btn-animation">Обрати</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="reviews section section-padding white-section" id="reviews">
+            <h2 class="section-heading">Відгуки</h2>
+            <div class="wrapper">
+                <div class="reviews__boxes">
+
+
+
+                    <div class="reviews__box">
+                        <div class="reviews__box-img">
+                            <img src="./img/osoba1.jpg" alt="Анна">
+                        </div>
+                        <div class="reviews__box-info">
+                            <div class="reviews__box-quote"> <i class="fas fa-quote-right"></i></div>
+                            <p class="reviews__box-text">Це був найкращий відпочинок у моєму житті! Організація на найвищому рівні, все продумано до дрібниць. 
+                                Відчула справжній релакс і тепер з нетерпінням чекаю на наступну подорож!</p>
+                            <strong class="osoba_name">Анна</strong>
+                        </div>
+                    </div>
+
+                    <div class="reviews__box">
+                        <div class="reviews__box-img">
+                            <img src="./img/osoba2.jpg" alt="Іван">
+                        </div>
+                        <div class="reviews__box-info">
+                            <div class="reviews__box-quote"> <i class="fas fa-quote-right"></i></div>
+                            <p class="reviews__box-text">Неймовірне місце для активного відпочинку!
+                                Екстримальні види спорту взимку — це щось особливе. Отримав заряд адреналіну та незабутні враження. Рекомендую всім!</p>
+                            <strong class="osoba_name">Іван</strong>
+                        </div>
+                    </div>
+
+                    <div class="reviews__box">
+                        <div class="reviews__box-img">
+                            <img src="./img/osoba3.jpg" alt="Марія">
+                        </div>
+                        <div class="reviews__box-info">
+                            <div class="reviews__box-quote"> <i class="fas fa-quote-right"></i></div>
+                            <p class="reviews__box-text">Весняний відпочинок був просто казковим! Природа навколо розквітала, і це створювало неймовірну атмосферу. 
+                                Пікнік з друзями став одним із найкращих спогадів цього року.</p>
+                            <strong class="osoba_name">Марія</strong>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact section-padding section white-section">
+            <h2 class="section-heading">Контакти</h2>
+    
+            <div class="contact-wrapper">
+                <div class="wrapper">
+                    <form class="contact__form"  method="POST">
+                        <div class="contact__form-top">
+                            <label for="name" class="contact__form-label">Ім'я</label>
+                            <input type="text" class="contact__form-input" id="name" name="name" required>
+                    
+                            <label for="email" class="contact__form-label">E-mail</label>
+                            <input type="email" class="contact__form-input" id="email" name="email" required>
+                        </div>
+                    
+                        <label for="msg" class="contact__form-label">Повідомлення</label>
+                        <textarea id="msg" class="contact__form-textarea" name="msg" required></textarea>
+                    
+                        <button type="submit" class="contact__form-btn btn-animation" id="btn">Надіслати</button>
+                    </form>
+                    
+                </div>
+    
+                <!-- Карта праворуч -->
+                <div id="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59892351.01634702!2d118.84431598754261!3d23.620860587502275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34674e0fd77f192f%3A0xf54275d47c665244!2z0K_Qv9C-0L3RltGP!5e0!3m2!1suk!2sua!4v1726583891911!5m2!1suk!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="wrapper">
+
+            <div class="footer__boxes">
+
+                <div class="footer__box">
+                    <h3 class="footer__box-title"><i class="fas fa-kiwi-bird"></i>TP Co.</h3>
+                    <p>Ласкаво просимо до Туристичного сайту! Ми пропонуємо ексклюзивні подорожі до кращих куточків світу для будь-якої пори року. 
+                        Від зимових курортів до літніх островів — обирайте своє ідеальне місце для відпочинку."</p>
+                </div>
+
+
+                <div class="footer__box footer__box-desktop">
+                    <h3 class="footer__box-title">Опис напрямків</h3>
+                    <ul class="footer__box-list">
+                        <li class="footer__box-list-item"><a href="#recomandation">Альпійська мрія</a></li>
+                        <li class="footer__box-list-item"><a href="#recomandation">Сакура Сіті</a></li>
+                        <li class="footer__box-list-item"><a href="#recomandation">Сонячна лагуна</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__box footer__box-desktop">
+                    <h3 class="footer__box-title">Про компанію</h3>
+                    <ul class="footer__box-list">
+                        <li class="footer__box-list-item"><a href="#">Про нас</a></li>
+                        <li class="footer__box-list-item"><a href="#">Керівництво</a></li>
+                        <li class="footer__box-list-item"><a href="#">Кар'єра</a></li>
+                        <li class="footer__box-list-item"><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__box-social">
+                <a href="https://x.com/?lang=uk" target="_blank" class="footer__box-link"><i class="fab fa-twitter-square"></i></a>
+                <a href="https://www.facebook.com/?locale=uk_UA" target="_blank" class="footer__box-link"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://www.instagram.com/" target="_blank" class="footer__box-link"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <hr>
+        <p class="footer__bottom-text">Copyright &copy; <span class="footer__year"></span> | Туристичний сайт</p>
+    </footer>
+
+
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./js/slick.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
